@@ -6,15 +6,20 @@
 </head>
 <body>
 <!-- =============== Exercise 1 =================== -->
-<!-- After writing your name in input field press Enter -->
+<!-- After writing your name in input field press Enter
+	ans : no change is observed after pressing the enter button because it's not a form and it's only taking input
+	and not performing any operations on it.
+ -->
 
-<!--<input type="text" name="name">-->
+<!--<input type="text" name="name">  -->
 
 
 
 <!-- =============== Exercise 2 =================== -->
 <!-- After writing your name in input field press Enter,
-        check URL, is it updated ? -->
+        check URL, is it updated ? 
+ans: when name is entered and enter button is pressed the name becomes part of the URL
+		-->
 
 <!--<form>
     <input type="text" name="name">
@@ -24,7 +29,9 @@
 
 <!-- =============== Exercise 3 =================== -->
 <!-- After writing your name in input field press Submit button,
-        is clicking submit different than pressing enter ? -->
+        is clicking submit different than pressing enter ? 
+		Ans: I entered my full name sana anjum and this time I pressed submit button, my full name becomes part of the
+		URL. This means whatever information you will add, all of it will become part of the URL-->
 
 <!--<form>
     <input type="text" name="name">
@@ -35,7 +42,10 @@
 
 <!-- =============== Exercise 4 =================== -->
 <!-- After writing your name and registration number in input fields,
-        press Submit button, is the URL is same now ? -->
+        press Submit button, is the URL is same now ? 
+		ans: No url is not the same now as there are now two fields so now both name and reg number 
+		become part of the URL with & in betweeen them.
+		-->
 
 <!--<form action="/my-handling-form-page">
     <input type="text" name="name">
@@ -46,8 +56,8 @@
 
 <!-- =============== Exercise 5 =================== -->
 <!-- After writing some text in input field,
-        press Submit button,  what happens? -->
-
+        press Submit button,  what happens? 
+		ans: When I enter any text it the field that page shows all the possible results of that text in google.-->
 <!--<form action="http://www.google.com/search">
     <input type="text" name="q">
     <input type="submit">
@@ -57,8 +67,9 @@
 
 <!-- =============== Exercise 6 =================== -->
 <!-- After writing "top web language" in input field,
-        press Submit button,  what is the value of q parameter in URL ? -->
-
+        press Submit button,  what is the value of q parameter in URL ?
+ans: value of q parameter is top+web+language, it redirects to the page of top web languages on google.
+		-->
 <!--<form action="http://www.google.com/search">
     <input type="text" name="q">
     <input type="submit">
@@ -71,7 +82,8 @@
 
 <!-- =============== Exercise 7 =================== -->
 <!-- After writing "Imran Khan!" in input field,
-        press Submit button,  what is the value of q parameter in URL ? -->
+        press Submit button,  what is the value of q parameter in URL ? 
+		ans: q=imran+khan%21 where 21 is the ASCII value of '!'-->
 
 <!--<form action="http://www.google.com/search">
     <input type="text" name="q">
@@ -86,9 +98,12 @@
         Is there any error ? If yes, whats the error CODE ?
         Where did the "q" parameter go ?
         (Please check in "google chrome developers tool"
-        under "Network" tab )-->
+        under "Network" tab )
+		answer: Yes there is error, page was unable to load. Value of q is stored in
+		header of form handler and value of q is huawei.
+		-->
 
-<!--<form action="/form-handler" method="post">
+ <!--<form action="/form-handler" method="post">
     <input type="text" name="q">
     <input type="submit">
 </form>-->
@@ -96,7 +111,8 @@
 
 <!-- =============== Exercise 9 =================== -->
 <!-- After writing some text in input field,
-        press Submit button,  what is the value of q parameter in URL ? -->
+        press Submit button,  what is the value of q parameter in URL ? 
+		ans:The value of the password field was printed in the q parameter of url.-->
 
 <!--<form action="/my-handling-form-page" method="get">
     <input type="password" name="q">
@@ -107,7 +123,9 @@
 <!-- =============== Exercise 10 =================== -->
 <!-- After selecting and un-selecting checkbox,
         press Submit button,  what is the value of "g" parameter in URL
-        in both cases ? -->
+        in both cases ?
+		ans: value of g changes to "on" when checkbox is selected while when checkbox is unselected no value of
+		g is printed.-->
 
 <!--<form action="/my-handling-form-page" method="get">
     <input type="checkbox" name="g">
@@ -119,6 +137,7 @@
 <!-- =============== Exercise 11 =================== -->
 <!-- After selecting first 2 checkboxes,
         press Submit button,  what does query section of URL look like ?
+		ans:status of g and h is on. 'g=on&h=on' it looks like this.
 -->
 
 <!--<form action="/my-handling-form-page" method="get">
@@ -135,6 +154,7 @@
 <!-- =============== Exercise 12 =================== -->
 <!-- After selecting all radio buttons,
         press Submit button,  what does query section of URL look like ?
+		answer: ans:status of g and h is on. 'g=on&h=on&q=on' it looks like this.
 -->
 
 <!--<form action="/my-handling-form-page" method="get">
@@ -151,6 +171,7 @@
 <!-- =============== Exercise 13 =================== -->
 <!-- After selecting 2nd radio buttons,
         press Submit button,  what is the value of "q" parameter in URL ?
+		answer: value of q is 'two'
 -->
 
 <!--<form action="/my-handling-form-page" method="get">
@@ -165,6 +186,7 @@
 <!-- =============== Exercise 14 =================== -->
 <!-- After selecting 3nd radio button,
         press Submit button,  what is the value of "q" parameter in URL ?
+		answer: value of q parameter is 'three'
 -->
 
 <!--<form action="/my-handling-form-page" method="get">
@@ -188,6 +210,7 @@
 <!-- =============== Exercise 15 =================== -->
 <!-- After selecting "two" from the drop-down,
         press Submit button,  what is the value of "q" parameter in URL ?
+		answer: value of q is 'two'
 -->
 
 <!--<form action="/my-handling-form-page" method="get">
@@ -198,8 +221,8 @@
     </select>
     <br><br>
     <input type="submit">
-</form>-->
-
+</form>
+-->
 
 
 
@@ -208,11 +231,12 @@
 <!-- =============== Exercise 16 =================== -->
 <!-- After selecting "the number one" from the drop-down,
         press Submit button,  what is the value of "q" parameter in URL ?
+		answer: value of q=1 in url.
 
      After selecting "the last three" from the drop-down,
         press Submit button,  what is the value of "q" parameter in URL ?
+		answer: value of q=the+last+three in url.
 -->
-
 <!--<form action="/my-handling-form-page" method="get">
     <select name="q">
         <option value="1">the number one</option>
@@ -221,7 +245,7 @@
     </select>
     <br><br>
     <input type="submit">
-</form>-->
-
+</form>
+-->
 </body>
 </html>
