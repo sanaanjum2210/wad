@@ -1,6 +1,15 @@
 #main {
-    /* add CSS here */
+    margin: auto;
+    max-width:350px;
+
 }
 .pet {
     /* add CSS here */
+    border-radius: 15px;
+    border: #fa0032;
+    border-style: dashed;
+    cursor: pointer;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
