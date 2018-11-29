@@ -28,10 +28,34 @@ displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
+    currentQuestion++;
+
+    if(currentQuestion==questions.length)
+    {
+        displayScore();
+    }
+    displayCurrentQuestion();
+
+
+
 }
 
 function displayCurrentQuestion() {
     /*Write your code here */
+    var question=document.getElementById("question");
+    var answers=document.getElementById("choice-list");
+    question.innerText=questions[currentQuestion].question;
+    answers.innerHTML = "";
+    for(i=0; i<questions[currentQuestion].choices.length; i++)
+    {
+        answers.innerHTML += "<li>" + "<input type = 'radio' name = 'Choices' value = 'questions[currentQuestion].choices[i]' >" + questions[currentQuestion].choices[i] + "</li>";
+
+    }
+    if(document.querySelector("input[type=radio]:checked"))
+    {
+        correctAnswers++;
+    }
+
 }
 
 function resetQuiz() {
