@@ -28,16 +28,23 @@ displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
+    var match=document.querySelector("input[type=radio]:checked").value;
+    if(match==questions[currentQuestion].correctAnswer)
+    {
+        correctAnswers++;
+    }
     currentQuestion++;
 
     if(currentQuestion==questions.length)
     {
+
         displayScore();
+        document.getElementById("next-btn").innerText="Reset";
+        document.getElementById("next-btn").className="play-btn";
+        document.getElementById("next-btn").setAttribute('onclick','again()');
+
     }
     displayCurrentQuestion();
-
-
-
 }
 
 function displayCurrentQuestion() {
@@ -48,16 +55,20 @@ function displayCurrentQuestion() {
     answers.innerHTML = "";
     for(i=0; i<questions[currentQuestion].choices.length; i++)
     {
-        answers.innerHTML += "<li>" + "<input type = 'radio' name = 'Choices' value = 'questions[currentQuestion].choices[i]' >" + questions[currentQuestion].choices[i] + "</li>";
+        answers.innerHTML += "<li>" + "<input type = 'radio' name = 'Choices' value = "+i+" >" + questions[currentQuestion].choices[i] + "</li>";
 
     }
-    if(document.querySelector("input[type=radio]:checked"))
-    {
-        correctAnswers++;
-    }
+
 
 }
-
+function again(){
+    currentQuestion=0;
+    document.getElementById("next-btn").innerText="Next Question";
+    document.getElementById("next-btn").className="";
+    document.getElementById("next-btn").setAttribute('onclick','displayNext()');
+    resetQuiz();
+    displayNext();
+}
 function resetQuiz() {
     currentQuestion = 0;
     correctAnswers = 0;
