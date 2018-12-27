@@ -1,31 +1,31 @@
-/*function  showAlertBox() {
+function  showAlertBox() {
     alert("Display Message")
-}*/
+}
 
 
-/*
+
 function  displayName(name) {
     alert("My Name is " + name);
 }
-*/
+
 /* Parameter vs Argument */
-/*function  show Message() {
+function  showMessage() {
     console.log("A message to the console");
-}*/
+}
 
 
-/*function sum() {
+function sum() {
     var n1 = 5;
     var n2 = 3;
     var sum = n1 + n2;
     alert("Sum is "+ sum);
-}*/
+}
 
 
-/*function multiply(a,b) {
-    var result = a * b;
+function multiply() {
+    var result = 5 * 6;
     alert("Result: " + result);
-}*/
+}
 
 /*
 expo();

@@ -8,12 +8,13 @@
 <body>
 <h1 class="TitleH1">JS Bank</h1>
 <h2 class="TitleH2">Saving Account</span> </h2>
+
 <div>
     <div class="AccountDetails">
         <div class="sav-acct-info">
             <div class="acct-head">Account Title:</div>
             <div class="acct-desc">
-                <span id="title"></span>
+                <input id="acc_name" placeholder="Account Name" onkeydown = "input_data()">
             </div>
         </div>
         <div class="sav-acct-info acct-lft">
@@ -40,23 +41,25 @@
 <div class="sav-acct-info acct-lft">
     <div class="acct-head">Deposit</div>
     <div class="acct-desc">
-        <input id="deposit" placeholder="Deposit Amount" onkeydown="depositfunc()">
-        <b><i><p class="actions" id="deposit-msg"></p></i></b>
+        <input id="deposit" placeholder="Deposit Amount" onkeydown = "deposit()">
+        <p id="deposit-msg" class="actions"></p>
     </div>
 </div>
 <div class="sav-acct-info">
     <div class="acct-head">Withdraw</div>
     <div class="acct-desc">
-        <input id="withdraw" placeholder="Withdraw Amount" onkeydown="withdrawfunc()">
-       <b><i> <p class="actions" id="withdraw-msg"></p></i></b>
+        <input id="withdraw" placeholder="Withdraw Amount" onkeydown="withdraw() ">
+        <p id="withdraw-msg"></p>
     </div>
 </div>
 <h2 class="actions"> Transactions History  </h2>
 <table id="transaction-table" cellspacing="0" rules="all" border="1" style="width:100%;">
     <tr>
         <th align="left" valign="middle" scope="col">Date</th>
+        <th align="left" valign="middle" scope="col">Account Name</th>
         <th align="left" valign="middle" scope="col">Type</th>
         <th align="left" valign="middle" scope="col">Amount</th>
+        <th align="left" valign="middle" scope="col">New Balance</th>
     </tr>
 </table>
 <script src="js/main.js"></script>

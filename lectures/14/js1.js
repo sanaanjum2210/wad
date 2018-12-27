@@ -13,7 +13,7 @@ let winner = false;
 if(points > 40) {
     let winner = true
 }
-console.log(winner);*/
+console.log(winner);
 
 
 /*const key = 'abc123';
@@ -126,12 +126,12 @@ if(a.myFunction === b.myFunction){
 document.addEventListener('click', myEventListeningFunction);
 
 // immediately removes the click listener that should run the `myEventListeningFunction` function
-document.removeEventListener('click', myEventListeningFunction);*/
+document.removeEventListener('click', myEventListeningFunction);
 
 
 
 
-/*// adds a listener for clicks, to run the `myEventListeningFunction` function
+// adds a listener for clicks, to run the `myEventListeningFunction` function
 document.addEventListener('click', function myEventListeningFunction() {
     console.log('howdy');
 });

@@ -36,7 +36,7 @@ function displayNext() {
     currentQuestion++;
 
     if(currentQuestion==questions.length)
-    {
+   {
 
         displayScore();
         document.getElementById("next-btn").innerText="Reset";
